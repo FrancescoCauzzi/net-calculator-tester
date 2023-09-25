@@ -13,7 +13,7 @@ namespace CalculatorTest
         [Test]
         public void TestDivide()
         {
-            double result = Calculator.Divide(144, 12);
+            float result = Calculator.Divide(144, 12);
             Assert.AreEqual(12, result);
         }
 
@@ -27,31 +27,31 @@ namespace CalculatorTest
         [Test]
         public void TestAdd()
         {
-            double result = Calculator.Add(3, 4);  
+            float result = Calculator.Add(3, 4);  
             Assert.AreEqual(7, result); 
         }
 
         [Test]
         public void TestMultiply()
         {
-            double result = Calculator.Multiply(3, 4);
+            float result = Calculator.Multiply(3, 4);
             Assert.AreEqual(12, result);
         }
         [Test]
         public void TestMultiplyForZeroArgument() {
-            double result = Calculator.Multiply(5, 0);
+            float result = Calculator.Multiply(5, 0);
             Assert.AreEqual(0, result);
         }
         [Test]
         public void TestMultiplyOverflow()
         {
-            double result = Calculator.Multiply((float)double.MaxValue, 2);
-            Assert.AreEqual(double.PositiveInfinity, result);
+            float result = Calculator.Multiply((float)float.MaxValue, 2);
+            Assert.AreEqual(float.PositiveInfinity, result);
         }
         [Test]
         public void TestSubtract()
         {
-            double result = Calculator.Subtract(-12, 18);
+            float result = Calculator.Subtract(-12, 18);
             Assert.AreEqual(-30, result);
         }
         
